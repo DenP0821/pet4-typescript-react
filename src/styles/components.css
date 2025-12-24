@@ -1,0 +1,11 @@
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.animate {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.baseStyles {
+  @apply mb-5 w-full rounded-lg bg-primary-300 autofill:shadow-[inset_0_0_0px_1000px_#ffa6a3] px-5 py-3 placeholder-white text-white;
+}
