@@ -1,3 +1,5 @@
+Ссылка: https://denp0821.github.io/pet4-typescript-react/
+
 После создания учебного проекта на React + JavaScript, я продолжил подкреплять теорию практикой. :arrow_double_up:
 
 На этот раз передо мной стояла задача создать проект, используя TypeScript + React.
