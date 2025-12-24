@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+После создания учебного проекта на React + JavaScript, я продолжил подкреплять теорию практикой. :arrow_double_up:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+На этот раз передо мной стояла задача создать проект, используя TypeScript + React.
+Формат решил оставить прежним - качественное обучающе-практическое видео с функциональным и лаконичным продуктом на выходе. При этом, некоторые моменты также менять на своё усмотрение, в качестве дополнительной практики. :chart_with_upwards_trend:
 
-Currently, two official plugins are available:
+<hr/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+В ходе создания данного приложения освоил и закрепил:
+ 
+:dart: Ещё раз: создание и подготовку рабочей области на основе сборщика Vite, работу с Node.js в среде VSCode (npm), зависимости и их корректировку, модульность и файловую организацию проекта, работу с хуками useState и useEffect, деплой завершенного проекта на Github Pages;
 
-## React Compiler
+:dart: Новый вид импортов и экспортов, связанных с TypeScript - с ключевым словом "type";
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+:dart: Функциональность TypeScript в связке с React: создание псевдонимов типов, и строго типизируемых Props, основанных как на type, так и на базовых аннотациях типов отдельных ключей Props;
 
-## Expanding the ESLint configuration
+:dart: Попутно разбирал и исправлял ошибки, которые возникали в процессе работы. Это дало понимание важности и удобства строгой типизации;
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+:dart: Работу с библиотекой Tailwind CSS (служебные классы библиотеки, директиву @theme и оформление темы проекта, пользовательские классы при помощи директивы @apply).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<hr/>
+ 
+Также, в процессе практики, были задействованы новые для меня хуки:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+:unlock: useMediaQuery для организации переключения с навигационной панели для больших экранов на мобильное меню для малых;
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+:unlock: useForm для настройки валидации формы со стороны клиента. Хук задействован в связке с библиотекой валидации Zod. Интегрирование библиотеки с React Hook Form было произведено с помощью функции Zod Resolver.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Дополнительно были использованы библиотеки: Swiper, motion, react-scroll (компонент Link).
