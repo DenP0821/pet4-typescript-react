@@ -1,5 +1,6 @@
 {
   "name": "pet4-typescript-react",
+  "homepage": "https://denp0821.github.io/pet4-typescript-react/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.2",
     "framer-motion": "^12.23.26",
+    "gh-pages": "^6.3.0",
     "i": "^0.3.7",
     "npm": "^11.7.0",
     "react": "^19.2.0",
